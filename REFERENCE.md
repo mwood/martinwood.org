@@ -13,6 +13,16 @@ Config changes require a server restart. Everything else (posts, CSS, layouts) h
 
 ---
 
+## How the site is laid out (Nov 2026)
+
+- **Homepage (`index.md`)** is a bio and selected work, not a post list. Chirpy's paginated `home` layout is no longer used, so `paginate` is gone from `_config.yml`.
+- **Sidebar tabs:** About (`_tabs/about.md`, the longer bio) and Writing (`_tabs/writing.md`, the archive of all posts).
+- **Categories and tags** are root pages (`categories.md`, `tags.md`) with fixed permalinks, so post links and breadcrumbs still work but they stay out of the sidebar.
+- **`_layouts/default.html` overrides the theme's copy** (Chirpy 7.4.1) to show "Recently Updated" and "Trending Tags" only beside posts. After upgrading Chirpy, re-copy it from `bundle info --path jekyll-theme-chirpy` and re-apply the `page.layout == 'post'` check.
+- Link check: `bundle exec htmlproofer _site --disable-external`. The failures it reports are all in old posts (http links, a dead mashable link) and predate the redesign.
+
+---
+
 ## Deploying
 
 Just push to `main` — GitHub Actions builds and deploys automatically:
