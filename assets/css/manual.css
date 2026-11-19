@@ -216,3 +216,16 @@ a:hover, a:focus-visible { background: var(--spot); color: var(--paper); outline
 .prose .rouge-table td { border: 0; padding: 0; }
 .prose .rouge-gutter pre { color: #9A9AA3; padding-right: 4px; text-align: right; user-select: none; }
 .prose .rouge-code pre { padding-left: 10px; }
+/* Homepage chapter 2: two pictures side by side, then a short list */
+.parts { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin: 6px 0 18px; }
+.parts figure { margin: 0; }
+.parts img { aspect-ratio: 4 / 3; object-fit: contain; background: var(--paper); padding: 12px; border: 1px solid var(--rule); }
+.parts-list { list-style: none; padding: 0; max-width: 62ch; }
+.parts-list li { border-top: 1px solid var(--rule); padding-top: 10px; margin-bottom: 10px; }
+@media (max-width: 560px) { .parts { grid-template-columns: 1fr; } }
+/* Homepage chapter 4: the shop-window program */
+.try .loop { display: block; white-space: normal; max-height: 4.95em; margin-bottom: 0.4em; overflow: hidden; }
+.try .hint { margin: 8px 0 0; font-size: 0.95rem; }
+.sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+.try pre { white-space: pre; overflow-x: auto; }
+@media (max-width: 560px) { .try pre { font-size: 0.84rem; } }

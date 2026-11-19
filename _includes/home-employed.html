@@ -3,7 +3,7 @@
     <div class="cover-row">
       <div>
         <h1>Getting to know Martin Wood</h1>
-        <p class="intro">A Rails and AI engineer in Cardiff. This short guide covers what he does, what he has built, and how to get in touch.</p>
+        <p class="intro">A <strong>Rails</strong> and <strong>AI</strong> engineer in Cardiff. This short guide covers what he does, what he has built, and how to get in touch.</p>
       </div>
       <img src="{{ site.avatar | relative_url }}" alt="Martin Wood">
     </div>
@@ -27,18 +27,20 @@
   </section>
 
   <section class="chapter">
-    <h2 class="ch"><span class="num">2</span> Things he has built</h2>
-    <figure>
-      <img src="{{ "/assets/img/home/ers.png" | relative_url }}" alt="The UK Easy Read Standards Checker homepage">
-      <figcaption><b>Figure 2.1</b> The Easy Read Standards checker. Upload a PDF and get a tick, a warning or a cross for each rule. <a href="https://easyreadstandard.org">easyreadstandard.org</a></figcaption>
-    </figure>
-    <figure>
-      <img src="{{ "/assets/img/home/photosymbols.png" | relative_url }}" alt="The Photosymbols homepage">
-      <figcaption><b>Figure 2.2</b> Photosymbols, where EasyMaker turns a document into an Easy Read pack: web page, accessible PDF, Word, audio and video, with a matching photo for each point.</figcaption>
-    </figure>
-    <ul>
-      <li><strong>Accessible PDFs</strong> that meet PDF/UA, and AI images marked for the EU AI Act.</li>
-      <li><strong>wt</strong> runs several AI coding agents on one Rails app at once.</li>
+    <h2 class="ch"><span class="num">2</span> Recently built</h2>
+    <div class="parts">
+      <figure>
+        <img src="{{ "/assets/img/home/photosymbols-photo.png" | relative_url }}" alt="Three people from the Photosymbols photo library in a colourful circle">
+        <figcaption><b>Figure 2.1</b> <a href="https://www.photosymbols.com">EasyMaker</a>. A document goes in and an Easy Read pack comes out, with a matching photo for each point: web page, Word, audio, video and PDFs that meet PDF/UA.</figcaption>
+      </figure>
+      <figure>
+        <img src="{{ "/assets/img/home/ers-covers.png" | relative_url }}" alt="Covers of the UK Easy Read Standards and its Easy Read guide">
+        <figcaption><b>Figure 2.2</b> <a href="https://easyreadstandard.org">Easy Read Standards checker</a>. Upload a PDF and get a tick, a warning or a cross for each rule.</figcaption>
+      </figure>
+    </div>
+    <ul class="parts-list">
+      <li><strong>An AI gateway.</strong> One way in to Anthropic, OpenAI and Google models. It records the cost of every call and removes personal data before any text leaves.</li>
+      <li><strong>wt.</strong> Runs several AI coding agents on one Rails app at once, each with its own copy of the code, database and server.</li>
     </ul>
   </section>
 
@@ -58,18 +60,21 @@
 
   <section class="chapter">
     <h2 class="ch"><span class="num">4</span> Unpacking</h2>
-    <p>Martin got a VIC-20 at eight, and its manual made programming feel like something anyone could try. He typed in listings from the backs of magazines, then moved to a Spectrum +2 (mostly Prestel) and an Amiga (C, 68k assembler and AMOS).</p>
-    <div class="try"><strong>Try this.</strong> Switch Martin on and type:
-<pre>PRINT "HELLO MARTIN"
-HELLO MARTIN
-READY.</pre></div>
+    <p>Martin got a VIC-20 at eight, and its manual made programming feel like something anyone could try. He typed in listings from the backs of magazines, then moved to a Spectrum +2 and an Amiga (C, 68k assembler and AMOS). The Spectrum's real job was a modem: he has been online since 1987, on Micronet/Prestel at 1200/75 baud.</p>
+    <div class="try"><strong>Try this.</strong> The program every child typed into the display computers in Dixons, then walked away from:
+<pre>10 PRINT "MARTIN WAS HERE ";
+20 GOTO 10
+RUN
+<span class="sr">MARTIN WAS HERE, repeated until someone stops it</span><span class="loop" aria-hidden="true">MARTIN WAS HERE MARTIN WAS HERE MARTIN WAS HERE MARTIN WAS HERE MARTIN WAS HERE MARTIN WAS HERE MARTIN WAS HERE MARTIN WAS HERE MARTIN WAS HERE MARTIN WAS HERE MARTIN WAS HERE MARTIN WAS HERE</span>BREAK IN 10
+READY.</pre>
+      <p class="hint">Press RUN/STOP before the shop assistant comes over.</p></div>
   </section>
 
   <section class="chapter">
     <h2 class="ch"><span class="num">5</span> Care and maintenance</h2>
     <ul>
       <li>Keep him in a terminal.</li>
-      <li>Give him a schedule. Without one, nothing happens.</li>
+      <li>Feed him Kanban boards. Without one, nothing happens.</li>
       <li>He runs a shutdown checklist every night. Do not interrupt it.</li>
     </ul>
     <div class="specs" aria-label="Specifications">
@@ -80,8 +85,8 @@ READY.</pre></div>
         <tr><td>Editor</td><td>Vim, 25+ years</td></tr>
         <tr><td>Bookmarks saved</td><td>56,000</td></tr>
         <tr><td>Bookmarks read</td><td>some</td></tr>
-        <tr><td>Games kept</td><td>1,755</td></tr>
-        <tr><td>Games written</td><td>0</td></tr>
+        <tr><td>Online since</td><td>1987</td></tr>
+        <tr><td>Modem speed</td><td>1200/75 baud</td></tr>
         <tr class="total"><td>Years shipping</td><td>29</td></tr>
       </table>
     </div>
