@@ -19,6 +19,7 @@ Config changes require a server restart. Everything else (posts, CSS, layouts) h
 - **Homepage (`index.html`)** links to both appendices at the bottom. Chirpy's paginated `home` layout is no longer used, so `paginate` is gone from `_config.yml`. It is `.html`, not `.md`, so that kramdown doesn't treat the indented HTML in the includes as code blocks.
 - **Homepage content** is in `_includes/home-employed.html`. The Specifications receipt numbers live there too.
 - **Homepage images** live in `assets/img/home/`. The portrait is the site `avatar`.
+- **Favicon:** a white M on the manual red (#D62828), in `assets/img/favicons/`, overriding Chirpy's default icons. `favicon.svg` is the source (the M is a path, so no font is needed). Regenerate the rest from it: `rsvg-convert -w 96 -h 96 favicon.svg -o favicon-96x96.png`, the same at 180 for `apple-touch-icon.png`, and `favicon.ico` from 16, 32 and 48px PNGs with `magick`.
 - **Tabs:** About (`_tabs/about.md`, layout `manual`) and Writing (`_tabs/writing.md`, layout `archives`). They are reached from the footer of every page, which is `_includes/manual-back.html`.
 - **Categories and tags** are root pages (`categories.md`, `tags.md`) with fixed permalinks, so post links and breadcrumbs still work but they stay out of the sidebar.
 - Link check: `bundle exec htmlproofer _site --disable-external`. The failures it reports are all in old posts (http links, a dead mashable link) and predate the redesign.
