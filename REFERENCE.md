@@ -15,7 +15,9 @@ Config changes require a server restart. Everything else (posts, CSS, layouts) h
 
 ## How the site is laid out (Nov 2026)
 
-- **Homepage (`index.md`)** is a bio and selected work, not a post list. Chirpy's paginated `home` layout is no longer used, so `paginate` is gone from `_config.yml`.
+- **Homepage (`index.html`)** is styled as a 1980s computer manual, using its own standalone layout (`_layouts/manual.html` and `assets/css/manual.css`), so it has no Chirpy sidebar. It links to About and Writing at the bottom. Chirpy's paginated `home` layout is no longer used, so `paginate` is gone from `_config.yml`. It is `.html`, not `.md`, so that kramdown doesn't treat the indented HTML in the includes as code blocks.
+- **Homepage content** is in `_includes/home-employed.html`. The Specifications receipt numbers live there too.
+- **Homepage images** live in `assets/img/home/`. The portrait is the site `avatar`.
 - **Sidebar tabs:** About (`_tabs/about.md`, the longer bio) and Writing (`_tabs/writing.md`, the archive of all posts).
 - **Categories and tags** are root pages (`categories.md`, `tags.md`) with fixed permalinks, so post links and breadcrumbs still work but they stay out of the sidebar.
 - **`_layouts/default.html` overrides the theme's copy** (Chirpy 7.4.1) to show "Recently Updated" and "Trending Tags" only beside posts. After upgrading Chirpy, re-copy it from `bundle info --path jekyll-theme-chirpy` and re-apply the `page.layout == 'post'` check.

@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {% seo %}
+  {% include_cached favicons.html %}
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;800&family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ '/assets/css/manual.css' | relative_url }}">
+</head>
+<body>
+<!-- A standalone page in the style of a 1980s computer manual. It deliberately
+     skips Chirpy's sidebar layout; About and Writing still use the theme. -->
+<main class="book">
+{{ content }}
+</main>
+</body>
+</html>

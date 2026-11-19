@@ -3,7 +3,7 @@ icon: fas fa-info-circle
 order: 1
 ---
 
-I'm a software engineer in Cardiff with nearly thirty years of building for the web. For the last decade I've built and run the whole technical platform at [Photosymbols](https://www.photosymbols.com), and since 2024 I've turned it into an AI product used by public-sector organisations across the UK.
+I'm a software engineer in Cardiff with nearly thirty years of building for the web. Since 2012 I've built and run the whole technical platform at [Photosymbols](https://www.photosymbols.com), full-time since 2022, and since 2024 I've turned it into an AI product used by public-sector organisations across the UK.
 
 ## Now: Photosymbols
 
@@ -21,7 +21,7 @@ Tests first. A short written design before anything large, then a plan, then the
 
 ## Before
 
-I started as a Java developer in 1997 and spent the 2000s as a developer, technical team leader and applications architect. I then went freelance with Ruby on Rails, building large sites, mainly for government and education.
+I started in 1997 writing Perl and C++ for Companies House, including WebCHeck and the award-winning Companies House Direct. In the 2000s I moved to Java as a project lead and team lead, on the European Business Register, Cardiff University's website and Companies House's £40m CHIPS project. In 2007 I started my own software company, and in 2010 I went freelance with Ruby on Rails.
 
 ## Tools I use
 
