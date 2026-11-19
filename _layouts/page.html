@@ -1,0 +1,11 @@
+---
+layout: manual
+book_class: appendix
+---
+{% comment %} Overrides Chirpy's page layout (404 and any plain page). {% endcomment %}
+<p class="kicker"><a href="{{ "/" | relative_url }}">Getting to know Martin Wood</a></p>
+<h1>{{ page.title }}</h1>
+<div class="prose">
+{{ content }}
+</div>
+{% include manual-back.html %}

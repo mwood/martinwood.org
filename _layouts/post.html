@@ -1,0 +1,30 @@
+---
+layout: manual
+book_class: appendix article
+---
+{% comment %} Overrides Chirpy's post layout so every old post reads as part of the manual. {% endcomment %}
+<p class="kicker"><a href="{{ "/writing/" | relative_url }}">Appendix B: Writing</a></p>
+<h1>{{ page.title }}</h1>
+<p class="byline">Published <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%-d %B %Y" }}</time></p>
+{% assign now_year = site.time | date: "%Y" | plus: 0 %}
+{% assign post_year = page.date | date: "%Y" | plus: 0 %}
+{% assign age = now_year | minus: post_year %}
+{% if age >= 3 %}
+<p class="dated"><strong>Earlier model.</strong> Written in {{ post_year }}, {{ age }} years ago. Some details and links may be out of date.</p>
+{% endif %}
+<div class="prose">
+{{ content }}
+</div>
+{% assign filed = page.categories | concat: page.tags | uniq %}
+{% if filed.size > 0 %}
+<p class="filed">Filed under:
+  {%- for c in filed %}{% if page.categories contains c %}{% assign base = "/categories/" %}{% else %}{% assign base = "/tags/" %}{% endif %}{% assign slug = c | slugify %}
+  <a href="{{ base | append: slug | append: "/" | relative_url }}">{{ c }}</a>{% unless forloop.last %},{% endunless %}
+  {%- endfor %}
+</p>
+{% endif %}
+<nav class="pager" aria-label="More articles">
+  {% if page.previous %}<a href="{{ page.previous.url | relative_url }}"><span>Older</span>{{ page.previous.title }}</a>{% else %}<span></span>{% endif %}
+  {% if page.next %}<a class="newer" href="{{ page.next.url | relative_url }}"><span>Newer</span>{{ page.next.title }}</a>{% endif %}
+</nav>
+{% include manual-back.html %}

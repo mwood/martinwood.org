@@ -12,7 +12,7 @@
 <body>
 <!-- A standalone page in the style of a 1980s computer manual. It deliberately
      skips Chirpy's sidebar layout; About and Writing still use the theme. -->
-<main class="book">
+{% assign book_class = page.book_class | default: layout.book_class %}<main class="book{% if book_class %} {{ book_class }}{% endif %}">
 {{ content }}
 </main>
 </body>

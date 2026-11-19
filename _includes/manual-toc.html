@@ -1,0 +1,6 @@
+{% comment %} Contents-page list of posts: title, dotted leader, date. Pass posts= and date_format= {% endcomment %}
+<ol class="toc">
+  {% for post in include.posts %}
+  <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a><span class="dots" aria-hidden="true"></span><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: include.date_format }}</time></li>
+  {% endfor %}
+</ol>

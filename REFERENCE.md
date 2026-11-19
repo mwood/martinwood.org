@@ -15,12 +15,12 @@ Config changes require a server restart. Everything else (posts, CSS, layouts) h
 
 ## How the site is laid out (Nov 2026)
 
-- **Homepage (`index.html`)** is styled as a 1980s computer manual, using its own standalone layout (`_layouts/manual.html` and `assets/css/manual.css`), so it has no Chirpy sidebar. It links to About and Writing at the bottom. Chirpy's paginated `home` layout is no longer used, so `paginate` is gone from `_config.yml`. It is `.html`, not `.md`, so that kramdown doesn't treat the indented HTML in the includes as code blocks.
+- **The whole site is styled as a 1980s computer manual**, using `_layouts/manual.html` and `assets/css/manual.css`, with no Chirpy sidebar, topbar or search. The repo overrides Chirpy's `post`, `page`, `archives`, `categories`, `tags`, `category` and `tag` layouts, plus `assets/404.html`, so every page uses it: About is "Appendix A", Writing is "Appendix B" (a contents page), and categories and tags are back-of-book indexes. Posts older than three years show an "Earlier model" note. Code highlighting is Rouge's `github` style, appended to `manual.css`. Chirpy is still the theme gem for its plugins and includes (`favicons.html`). After upgrading it, check `bundle exec jekyll build` for a "Conflict" warning, which means a theme file now shadows one of ours. Set a `book_class` in front matter to add a class to the page.
+- **Homepage (`index.html`)** links to both appendices at the bottom. Chirpy's paginated `home` layout is no longer used, so `paginate` is gone from `_config.yml`. It is `.html`, not `.md`, so that kramdown doesn't treat the indented HTML in the includes as code blocks.
 - **Homepage content** is in `_includes/home-employed.html`. The Specifications receipt numbers live there too.
 - **Homepage images** live in `assets/img/home/`. The portrait is the site `avatar`.
-- **Sidebar tabs:** About (`_tabs/about.md`, the longer bio) and Writing (`_tabs/writing.md`, the archive of all posts).
+- **Tabs:** About (`_tabs/about.md`, layout `manual`) and Writing (`_tabs/writing.md`, layout `archives`). They are reached from the footer of every page, which is `_includes/manual-back.html`.
 - **Categories and tags** are root pages (`categories.md`, `tags.md`) with fixed permalinks, so post links and breadcrumbs still work but they stay out of the sidebar.
-- **`_layouts/default.html` overrides the theme's copy** (Chirpy 7.4.1) to show "Recently Updated" and "Trending Tags" only beside posts. After upgrading Chirpy, re-copy it from `bundle info --path jekyll-theme-chirpy` and re-apply the `page.layout == 'post'` check.
 - Link check: `bundle exec htmlproofer _site --disable-external`. The failures it reports are all in old posts (http links, a dead mashable link) and predate the redesign.
 
 ---

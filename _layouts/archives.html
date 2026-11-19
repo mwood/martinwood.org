@@ -1,0 +1,15 @@
+---
+layout: manual
+book_class: appendix
+---
+{% comment %} Overrides Chirpy's archives layout: the Writing tab, as a contents page. {% endcomment %}
+<p class="kicker"><a href="{{ "/" | relative_url }}">Getting to know Martin Wood</a></p>
+<h1>Appendix B: Writing</h1>
+{% assign oldest = site.posts | last %}{% assign newest = site.posts | first %}
+<p>{{ site.posts.size }} articles, written between {{ oldest.date | date: "%Y" }} and {{ newest.date | date: "%Y" }}. I don't blog any more, but they stay here. There is also an <a href="{{ "/categories/" | relative_url }}">index by subject</a>.</p>
+{% assign years = site.posts | group_by_exp: "post", "post.date | date: '%Y'" %}
+{% for year in years %}
+<h2>{{ year.name }}</h2>
+{% include manual-toc.html posts=year.items date_format="%-d %b" %}
+{% endfor %}
+{% include manual-back.html %}

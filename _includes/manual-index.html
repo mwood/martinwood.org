@@ -1,0 +1,9 @@
+{% comment %} Back-of-book index of categories or tags. Pass terms= (site.categories or site.tags) and base= ("categories" or "tags") {% endcomment %}
+{% assign names = "" | split: "" %}
+{% for term in include.terms %}{% assign names = names | push: term[0] %}{% endfor %}
+{% assign names = names | sort_natural %}
+<ol class="toc index">
+  {% for name in names %}{% assign slug = name | slugify %}
+  <li><a href="{{ "/" | append: include.base | append: "/" | append: slug | append: "/" | relative_url }}">{{ name }}</a><span class="dots" aria-hidden="true"></span><span>{{ include.terms[name].size }}</span></li>
+  {% endfor %}
+</ol>

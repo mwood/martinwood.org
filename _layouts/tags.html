@@ -1,0 +1,10 @@
+---
+layout: manual
+book_class: appendix
+---
+{% comment %} Overrides Chirpy's tags layout as a back-of-book index. {% endcomment %}
+<p class="kicker"><a href="{{ "/writing/" | relative_url }}">Appendix B: Writing</a></p>
+<h1>Index of keywords</h1>
+<p>The number is how many articles mention it. See also the <a href="{{ "/categories/" | relative_url }}">index of subjects</a>.</p>
+{% include manual-index.html terms=site.tags base="tags" %}
+{% include manual-back.html %}

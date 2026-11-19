@@ -1,7 +1,14 @@
 ---
 icon: fas fa-info-circle
 order: 1
+layout: manual
+title: About
+book_class: appendix
 ---
+
+<p class="kicker"><a href="{{ "/" | relative_url }}">Getting to know Martin Wood</a></p>
+
+# Appendix A: Technical reference
 
 I'm a software engineer in Cardiff with nearly thirty years of building for the web. Since 2012 I've built and run the whole technical platform at [Photosymbols](https://www.photosymbols.com), full-time since 2022, and since 2024 I've turned it into an AI product used by public-sector organisations across the UK.
 
@@ -32,3 +39,5 @@ I started in 1997 writing Perl and C++ for Companies House, including WebCHeck a
 - **Ops:** Linux, Capistrano, Puma, Sentry
 
 Want to talk? Email [martin@martinwood.org](mailto:martin@martinwood.org).
+
+{% include manual-back.html %}
