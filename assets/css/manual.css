@@ -91,6 +91,8 @@ a:hover, a:focus-visible { background: var(--spot); color: var(--paper); outline
 .pager a { display: block; border: 2px solid var(--ink); padding: 10px 14px; text-decoration: none; color: var(--ink); line-height: 1.35; }
 .pager a span { display: block; font-weight: 700; color: var(--spot); font-size: 0.9rem; }
 .pager a:hover span, .pager a:focus-visible span { color: var(--paper); }
+/* .kicker a and .pager a set their own colour, which beats the plain a:hover rule: put the hover text back to white on red */
+.kicker a:hover, .kicker a:focus-visible, .pager a:hover, .pager a:focus-visible { color: var(--paper); }
 .pager .newer { text-align: right; grid-column: 2; }
 @media (max-width: 560px) { .pager { grid-template-columns: 1fr; } .pager .newer { grid-column: 1; text-align: left; } }
 .highlight table td { padding: 5px; }
